@@ -2,6 +2,7 @@ let wrapper = document.querySelector(".wrapper"),
 lineLoading = document.querySelector(".line"),
 welcome = document.querySelector(".welcome"),
 connectButton = document.querySelector(".connect"),
+text = document.querySelector(".text"),
 preloader = document.querySelector(".preloader");
 
 
@@ -20,4 +21,15 @@ if(wrapper.classList.contains = 'active') {
 connectButton.addEventListener('click', function(){
     wrapper.classList.add('whitelisted')
 
+})
+
+
+
+document.querySelector('.social').addEventListener('click', function() {
+    wrapper.classList.add('error');
+    text.innerHTML = "Sorry, you are not eligible...But Wait! </br> There are only 3 small steps to claim your NFT FAME PASS 16";
+})
+
+document.querySelector('.adress').addEventListener('click', function() {
+    wrapper.classList.add('success');
 })
