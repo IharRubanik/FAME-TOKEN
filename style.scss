@@ -271,7 +271,7 @@ body {
       align-items: center;
       overflow: hidden;
       opacity: 0;
-      transition: .5s opacity;
+      transition: 0.5s opacity;
       z-index: -1;
       display: none;
       h2 {
@@ -328,7 +328,7 @@ body {
       height: 54px;
       background: #da1616;
       opacity: 0;
-      transition: .5s opacity;
+      transition: 0.5s opacity;
       z-index: -1;
       display: none;
       span {
@@ -336,11 +336,11 @@ body {
         font-weight: 500;
         font-size: 18px;
         line-height: 30px;
-        color: #FFFFFF;
+        color: #ffffff;
         width: max-content;
       }
-      a{
-        img{
+      a {
+        img {
           width: 20px;
           height: auto;
         }
@@ -609,21 +609,94 @@ body {
       transition: 0.5s opacity;
       display: none;
     }
-    .adress{
+    .adress {
       display: none;
     }
-    .pass{
+    .pass {
       display: none;
     }
-    .gift{
+    .gift {
       opacity: 1;
       z-index: 1;
       display: flex;
     }
-    .share{
+    .share {
       opacity: 1;
       z-index: 1;
       display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    .whitelisted {
+      width: 293px !important;
+      p {
+        margin: 50px 0 0 0;
+        width: 100% !important;
+      }
+      .instruction {
+        .top-block {
+          flex-direction: column;
+          .instruction-elem {
+            &:nth-child(1) {
+              p {
+                width: 105px !important;
+              }
+
+              &::before {
+                content: "";
+                background: #da1616;
+                transform: translateY(23%);
+                clip-path: polygon(100% 50%, 0 0, 0 100%);
+              }
+            }
+            span {
+              font-size: 16px;
+              line-height: 20px;
+            }
+            &::before {
+              width: 9px !important;
+              height: 10px !important;
+              margin: 0 10px 0 0;
+              transform: translateY(16%) !important;
+            }
+          }
+        }
+        .bottom-block {
+          margin: 0;
+          position: absolute;
+          top: 258px;
+          right: 0;
+          img {
+            width: 59px;
+          }
+        }
+      }
+    }
+    footer {
+      padding: 0 0 35px 0;
+      .footer-info {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 240px;
+        gap: 0;
+        p {
+          &:nth-child(1) {
+            margin: 10px 0 0 0;
+          }
+          &:nth-child(2) {
+            order: -1;
+          }
+          &:nth-child(3) {
+            order: -1;
+          }
+          &:nth-child(4) {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
     }
   }
 }
