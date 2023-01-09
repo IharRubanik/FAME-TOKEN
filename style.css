@@ -368,6 +368,7 @@ body {
   line-height: 14px;
   text-align: start;
   transform: translateY(9%);
+  text-transform: capitalize;
 }
 .wrapper .whitelisted .instruction .top-block .instruction-elem span {
   font-weight: 700;
@@ -448,6 +449,16 @@ body {
 }
 .wrapper .whitelisted .pass:hover {
   background: #d21326;
+}
+.wrapper .whitelisted .error-link {
+  margin: 20px 0 0 0;
+  display: none;
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 30px;
+  color: #FFFFFF;
 }
 .wrapper footer {
   opacity: 0;
@@ -552,10 +563,20 @@ body {
 .wrapper.error .whitelisted .adress {
   margin: 36px 0 0 0;
 }
+.wrapper.error .whitelisted .pass {
+  background: #d21326;
+}
+.wrapper.error .whitelisted .pass:hover {
+  background: #ffffff;
+  color: #d21326;
+}
 .wrapper.error .whitelisted .instruction {
   display: block;
   opacity: 1;
   z-index: 3;
+}
+.wrapper.error .whitelisted .error-link {
+  display: block;
 }
 .wrapper.success .polygon video {
   opacity: 0;
