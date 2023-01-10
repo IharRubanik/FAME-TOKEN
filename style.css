@@ -49,6 +49,19 @@ body {
   transition: 0.5s background;
   overflow: hidden;
 }
+.wrapper .whitelisted-video-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s opacity, 0.5s filter;
+}
 .wrapper .blur {
   position: absolute;
   left: 0;
@@ -70,7 +83,7 @@ body {
      object-fit: cover;
   z-index: -1;
   opacity: 0;
-  transition: 0.5s opacity;
+  transition: 0.5s opacity, 0.5s filter;
 }
 .wrapper .error-web {
   position: absolute;
@@ -477,8 +490,9 @@ body {
 }
 .wrapper footer .social {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 38px;
 }
 .wrapper footer .footer-info {
   display: flex;
@@ -577,6 +591,20 @@ body {
 }
 .wrapper.error .whitelisted .error-link {
   display: block;
+}
+.wrapper.success .whitelisted-video-bg {
+  opacity: 1;
+  z-index: 2;
+}
+.wrapper.success::before {
+  opacity: 0;
+}
+.wrapper.success .web {
+  filter: blur(4px);
+  opacity: 0;
+}
+.wrapper.success .polygon {
+  background: none;
 }
 .wrapper.success .polygon video {
   opacity: 0;
@@ -706,5 +734,16 @@ body {
     position: static;
     gap: 10px;
     margin-top: auto;
+  }
+}
+@media only screen and (max-height: 690px) {
+  body {
+    overflow-y: visible;
+  }
+  .wrapper.active {
+    height: 690px;
+  }
+  .wrapper.active .blur {
+    height: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
