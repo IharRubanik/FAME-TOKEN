@@ -3,6 +3,7 @@ lineLoading = document.querySelector(".line"),
 welcome = document.querySelector(".welcome"),
 connectButton = document.querySelector(".connect"),
 text = document.querySelector(".text"),
+pass = document.querySelector('#pass'),
 preloader = document.querySelector(".preloader");
 
 
@@ -24,12 +25,15 @@ connectButton.addEventListener('click', function(){
 })
 
 
-
 document.querySelector('.social').addEventListener('click', function() {
     wrapper.classList.add('error');
-    text.innerHTML = "Sorry, you are not eligible...But Wait! </br> There are only 3 small steps to claim your NFT FAME PASS 16";
+    text.innerHTML = "Sorry, you are not eligible...But Wait! </br> There are only 3 small steps to claim your NFT FAME PASS 17";
+    pass.innerHTML = 'YOU ARE NOT ELIGIBLE!';
+
 })
 
 document.querySelector('.adress').addEventListener('click', function() {
     wrapper.classList.add('success');
 })
+
+
